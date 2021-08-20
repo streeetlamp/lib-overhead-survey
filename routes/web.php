@@ -15,7 +15,7 @@ use App\Http\Controllers\SurveyController;
 */
 
 Route::get('/', function () {
-    return view('layouts.app');
+    return view('surveys.create');
 });
 
 Route::resource('surveys', SurveyController::class);

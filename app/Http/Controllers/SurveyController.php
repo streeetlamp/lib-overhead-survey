@@ -13,11 +13,13 @@ class SurveyController extends Controller
      */
     public function index(Request $request, Survey $Survey)
     {
+        // $Survey->update($request->all());
+        // $survey->
+        // return view('surveys.show');
 
-        $surveys = Survey::all();
+        $surveys = $Survey->update($request->all());
 
-        return view('surveys.index', compact('surveys'))
-            ->with('i');
+        return view('surveys.index', compact('surveys'));
 
     }
 
@@ -82,15 +84,13 @@ class SurveyController extends Controller
      */
     public function update(Request $request, Survey $Survey)
     {
-        // $request->validate([
-        //     'name' => 'required',
-        //     'introduction' => 'required',
-        //     'location' => 'required',
-        //     'cost' => 'required'
-        // ]);
-        $Survey->update($request->all());
+        $request->validate([
+            'name' => 'required',
+            'location' => 'required'
+        ]);
 
-        return redirect()->route('surveys.index')
+
+        return redirect(RouteServiceProvider::HOME)
             ->with('success', 'Survey updated successfully');
     }
     /**
