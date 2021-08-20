@@ -62,6 +62,8 @@ class SurveyController extends Controller
      */
     public function show(Survey $Survey)
     {
+        // $surveys = $Survey->update($request->all());
+
         return view('surveys.show', compact('Survey'));
     }
 

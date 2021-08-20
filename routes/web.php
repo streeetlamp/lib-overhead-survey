@@ -18,4 +18,8 @@ Route::get('/', function () {
     return view('surveys.create');
 });
 
+Route::get('/show', function () {
+    return view('surveys.show', compact('Survey'));
+});
+
 Route::resource('surveys', SurveyController::class);
