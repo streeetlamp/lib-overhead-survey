@@ -15,11 +15,8 @@ use App\Http\Controllers\SurveyController;
 */
 
 Route::get('/', function () {
-    return view('surveys.create');
+    return view('surveys.index');
 });
 
-Route::get('/show', function () {
-    return view('surveys.show', compact('Survey'));
-});
 
 Route::resource('surveys', SurveyController::class);

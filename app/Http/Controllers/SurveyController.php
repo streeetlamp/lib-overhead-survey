@@ -13,13 +13,10 @@ class SurveyController extends Controller
      */
     public function index(Request $request, Survey $Survey)
     {
-        // $Survey->update($request->all());
-        // $survey->
-        // return view('surveys.show');
 
         $surveys = $Survey->update($request->all());
 
-        return view('surveys.index', compact('surveys'));
+        return view('surveys.success', compact('surveys'));
 
     }
 

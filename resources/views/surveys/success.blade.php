@@ -1,26 +1,13 @@
 @extends('layouts.app')
-
 @section('content')
     <div class="row">
-        <div class="col-lg-12 margin-tb">
-            <div class="pull-left">
-                <h2>Add New Survey</h2>
-            </div>
-            <div class="pull-right">
-                <a class="btn btn-primary" href="{{ route('surveys.index') }}" title="Go back"> <i class="fas fa-backward "></i> </a>
-            </div>
+        <div class="col-lg-12 mt-3 mb-2">
+                <h2>{{ config('app.name', 'Usage Survey') }}</h2>
         </div>
     </div>
-
-    @if ($errors->any())
-        <div class="alert alert-danger">
-            <strong>Whoops!</strong> There were some problems with your input.<br><br>
-            <ul>
-                @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                @endforeach
-            </ul>
+    @if ($message = Session::get('success'))
+        <div class="alert alert-success">
+            <p>{{ $message }}</p>
         </div>
-{{ success }}
     @endif
 @endsection
