@@ -18,5 +18,4 @@ Route::get('/', function () {
     return view('surveys.index');
 });
 
-
 Route::resource('surveys', SurveyController::class);

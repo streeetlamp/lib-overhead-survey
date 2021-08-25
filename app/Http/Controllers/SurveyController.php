@@ -3,6 +3,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Survey;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
+use Cookie;
 
 class SurveyController extends Controller
 {
@@ -13,9 +15,7 @@ class SurveyController extends Controller
      */
     public function index(Request $request, Survey $Survey)
     {
-
         $surveys = $Survey->update($request->all());
-
         return view('surveys.success', compact('surveys'));
 
     }
@@ -26,7 +26,7 @@ class SurveyController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, Response $response)
     {
         // $request->validate([
         //     'name' => 'required',
@@ -35,8 +35,8 @@ class SurveyController extends Controller
         //     'cost' => 'required'
         // ]);
 
-        Survey::create($request->all());
 
+        Survey::create($request->all());
         return redirect()->route('surveys.index')
             ->with('success', 'Survey created successfully.');
     }
