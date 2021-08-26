@@ -1,5 +1,4 @@
 @extends('layouts.app')
-
 @section('content')
     <div class="row">
         <div class="col-lg-12 mt-3">
@@ -8,7 +7,6 @@
             </div>
         </div>
     </div>
-
     @if ($errors->any())
         <div class="alert alert-danger">
             <strong>Whoops!</strong> There were some problems with your input.<br><br>
@@ -72,7 +70,6 @@
                     <option>Sponsored (Funded) Research</option>
                 </select>
             </div>
-
             <div class="col-xs-12 col-sm-12 col-md-12 mt-4">
                 <button type="submit" class="btn btn-lg btn-primary">Submit</button>
             </div>
