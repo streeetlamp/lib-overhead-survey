@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SurveyController;
+use Illuminate\Http\Request;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,8 +15,22 @@ use App\Http\Controllers\SurveyController;
 |
 */
 
-Route::get('/', function () {
-    return view('surveys.index');
+// Route::get('/', function (Request $request) {
+//     $uri = $request->path();
+//     if ($request->has('url')) {
+//         // @dd($request);
+//        $survey_redirect = $request->input('url');
+//     } else {
+//         return redirect('https://library.vcu.edu');
+//     }
+//     // @dd('completed form already');
+//     return redirect($survey_redirect);
+// });
+
+Route::get('/', function (Request $request) {
+    $sesh = Session::all();
+    return redirect('surveys/?url=')->with($sesh);
 });
+
 
 Route::resource('surveys', SurveyController::class);

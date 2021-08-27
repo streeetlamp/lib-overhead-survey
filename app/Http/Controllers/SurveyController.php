@@ -15,84 +15,25 @@ class SurveyController extends Controller
      */
     public function index(Request $request, Survey $Survey)
     {
-        $surveys = $Survey->update($request->all());
-        return view('surveys.success', compact('surveys'));
+        $form_visit = $request->cookie('usage_survey_session');
+        if ($form_visit) {
 
+        }
+        return view('surveys.index')->with($request->flash());
     }
-
     /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request, Response $response)
+    public function store(Request $request)
     {
-        // $request->validate([
-        //     'name' => 'required',
-        //     'introduction' => 'required',
-        //     'location' => 'required',
-        //     'cost' => 'required'
-        // ]);
-
-
+        $temp = $request->session()->get('_previous');
         Survey::create($request->all());
+        Session::put('resource', $temp);
         return redirect()->route('surveys.index')
-            ->with('success', 'Survey created successfully.');
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Survey  $Survey
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Survey $Survey)
-    {
-        // $surveys = $Survey->update($request->all());
-
-        return view('surveys.show', compact('Survey'));
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Survey  $Survey
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Survey $Survey)
-    {
-        return view('surveys.edit', compact('Survey'));
-    }
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Survey  $Survey
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Survey $Survey)
-    {
-        $request->validate([
-            'name' => 'required',
-            'location' => 'required'
-        ]);
-
-
-        return redirect(RouteServiceProvider::HOME)
-            ->with('success', 'Survey updated successfully');
-    }
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Survey  $Survey
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Survey $Survey)
-    {
-        $Survey->delete();
-
-        return redirect()->route('surveys.index')
-            ->with('success', 'Survey deleted successfully');
+            ->with('success', 'Survey created successfully.')
+            ->with('redirect', $temp);
     }
 }
