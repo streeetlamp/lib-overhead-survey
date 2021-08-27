@@ -20,7 +20,7 @@ class CreateSurveysTable extends Migration
             $table->text('affiliation')->nullable();
             $table->text('location')->nullable();
             $table->text('purpose')->nullable();
-            $table->bigInteger('sesh')->nullable();
+            $table->text('sesh')->nullable();
         });
     }
 

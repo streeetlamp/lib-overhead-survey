@@ -19,6 +19,7 @@ class Survey extends Model
         'status',
         'affiliation',
         'location',
-        'purpose'
+        'purpose',
+        'sesh'
     ];
 }

@@ -5,6 +5,7 @@ use App\Models\Survey;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Cookie;
+use Session;
 
 class SurveyController extends Controller
 {
@@ -19,7 +20,7 @@ class SurveyController extends Controller
         if ($form_visit) {
 
         }
-        return view('surveys.index')->with($request->flash());
+        return view('surveys.success')->with($request->flash());
     }
     /**
      * Store a newly created resource in storage.
@@ -29,11 +30,20 @@ class SurveyController extends Controller
      */
     public function store(Request $request)
     {
-        $temp = $request->session()->get('_previous');
-        Survey::create($request->all());
-        Session::put('resource', $temp);
+            $arr = $request->all();
+            $arr['sesh'] = 'test';
+            @dd($arr);
+
+        // $save_survey = array_push($save_survey, 'sesh');
+        // $temp = $request->session()->get('_previous');
+        Survey::create($arr);
+// $affected = DB::update(
+//     'update users set votes = 100 where name = ?',
+//     ['Anita']
+// );
+        // Session::put('resource', $temp);
         return redirect()->route('surveys.index')
-            ->with('success', 'Survey created successfully.')
-            ->with('redirect', $temp);
+            ->with('success', 'Survey created successfully.');
+            // ->with('redirect', $temp);
     }
 }

@@ -28,8 +28,7 @@ use Illuminate\Http\Request;
 // });
 
 Route::get('/', function (Request $request) {
-    $sesh = Session::all();
-    return redirect('surveys/?url=')->with($sesh);
+    return redirect('?url=')->with('test-flash');
 });
 
 
