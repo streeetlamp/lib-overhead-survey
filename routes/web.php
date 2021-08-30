@@ -28,8 +28,19 @@ use Illuminate\Http\Request;
 // });
 
 Route::get('/', function (Request $request) {
-    return redirect('?url=')->with('test-flash');
+    return redirect('/surveys?url=');
+    // $url_param = $request->input('url');
+    // return redirect('/surveys?url=' . e($url_param));
+});
+Route::get('/surveys', function (Request $request) {
+    return redirect('/surveys?url=');
 });
 
+// Route::get('/surveys/success', function (Request $request) {
+//     return view('surveys.success');
+// });
 
-Route::resource('surveys', SurveyController::class);
+Route::resource('surveys', SurveyController::class)
+->missing(function (Request $request) {
+    return Redirect::route('index');
+});;

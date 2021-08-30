@@ -21,6 +21,7 @@ class CreateSurveysTable extends Migration
             $table->text('location')->nullable();
             $table->text('purpose')->nullable();
             $table->text('sesh')->nullable();
+            $table->text('resource')->nullable();
         });
     }
 
