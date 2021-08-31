@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\DB;
 use App\Models\Survey;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
@@ -17,12 +18,22 @@ class SurveyController extends Controller
      */
     public function index(Request $request, Survey $Survey)
     {
+        $sesh_Id = Session::get('_token');
+        $revisit = DB::table('surveys')->where('sesh', $sesh_Id)->first();
         $url_param = $request->query('url');
-        $form_visit = $request->cookie('usage_survey_session');
-        if ($form_visit) {
-        }
         Session::put('url', $url_param);
-        return view('surveys.index');
+
+        // this is a new user
+        if ($revisit === null) {
+            return view('surveys.index');
+        }
+
+        $revisit_form = $request->all();
+        $revisit_form['resource'] = $url_param;
+        $revisit_form['sesh'] = $sesh_Id;
+
+        Survey::create($revisit_form);
+        return redirect($url_param);
     }
 
     /**

@@ -17,7 +17,7 @@
             let seshRed = "{{ $resource }}";
             let resourceRedirect = setTimeout(function resRed() {
                 window.location.replace(seshRed);
-            }, 20000);
+            }, 3000);
         </script>
     @endif
 @endsection
