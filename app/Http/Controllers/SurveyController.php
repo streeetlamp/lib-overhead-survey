@@ -33,7 +33,7 @@ class SurveyController extends Controller
         $revisit_form['sesh'] = $sesh_Id;
 
         Survey::create($revisit_form);
-        return redirect($url_param);
+        return redirect('https://proxy.library.vcu.edu/login?url='.$url_param);
     }
 
     /**
