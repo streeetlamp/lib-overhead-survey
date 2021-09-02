@@ -9,6 +9,9 @@
         <div class="col-lg-12 mt-1 alert alert-success text-center">
             <p>
             <h5>{{ $message }}</h5>
+            @if ($resource = Session::get('url'))
+                <a class="btn btn-primary" href="https://proxy.library.vcu.edu/login?url={{ $resource}}" role="button">Continue to Resource</a>
+            @endif
             </p>
         </div>
     @endif
