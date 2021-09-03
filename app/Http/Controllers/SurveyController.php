@@ -28,11 +28,11 @@ class SurveyController extends Controller
             return view('surveys.index');
         }
 
-        $revisit_form = $request->all();
-        $revisit_form['resource'] = $url_param;
-        $revisit_form['sesh'] = $sesh_Id;
+        $revisit_form = DB::table('surveys')->where('sesh', '=', $sesh_Id)->get();
+        $revisit_form[0][resource] = $url_param;
+        @dd(gettype($revisit_form[0]));
 
-        Survey::create($revisit_form);
+        Survey::create($revisit_form[0]);
         return redirect('https://proxy.library.vcu.edu/login?url='.$url_param);
     }
 
