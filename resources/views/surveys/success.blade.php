@@ -17,7 +17,7 @@
     @endif
     @if ($resource = Session::get('url'))
         <script>
-            let seshRed = "{{ $resource }}";
+            let seshRed = "https://proxy.library.vcu.edu/login?url={{ $resource }}";
             let resourceRedirect = setTimeout(function resRed() {
                 window.location.replace(seshRed);
             }, 3000);
