@@ -10,7 +10,7 @@
             <p>
             <h5>{{ $message }}</h5>
             @if ($resource = Session::get('url'))
-                <a class="btn btn-primary" href="https://proxy.library.vcu.edu/login?url={{ $resource}}" role="button">Continue to Resource</a>
+                <a class="btn btn-primary" href="https://proxy.library.vcu.edu/login?url={{ $resource}}" role="button">Proceed to resource</a>
             @endif
             </p>
         </div>
