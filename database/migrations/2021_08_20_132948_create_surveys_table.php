@@ -16,12 +16,12 @@ class CreateSurveysTable extends Migration
         Schema::create('surveys', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->text('status');
-            $table->text('affiliation');
-            $table->text('location');
-            $table->text('purpose');
+            $table->text('status')->nullable();
+            $table->text('affiliation')->nullable();
+            $table->text('location')->nullable();
+            $table->text('purpose')->nullable();
             $table->text('sesh')->nullable();
-            $table->text('resource');
+            $table->text('resource')->nullable();
         });
     }
 
