@@ -24,7 +24,8 @@
         <div class="form-row">
             <div class="col-xs-10 col-sm-10 col-md-10 mt-3">
                 <label for="status"><strong>Are you a:</strong></label>
-                <select name="status" class="form-control" id="status" placeholder="status">
+                <select required name="status" class="form-control" id="status" placeholder="status">
+                    <option placeholder="Readonly input here…" readonly value="">Please choose an option</option>
                     <option>VCU Undergraduate Student</option>
                     <option>VCU Graduate/Professional Student</option>
                     <option>VCU Faculty</option>
