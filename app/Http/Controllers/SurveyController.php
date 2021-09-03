@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\DB;
 use App\Models\Survey;
+use Illuminate\Support\Arr;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Cookie;
@@ -28,9 +29,12 @@ class SurveyController extends Controller
             return view('surveys.index');
         }
 
-        $revisit_form = DB::table('surveys')->where('sesh', '=', $sesh_Id)->get();
-        $revisit_form[0][resource] = $url_param;
-        @dd(gettype($revisit_form[0]));
+        $revisit_form = Survey::where('sesh',$sesh_Id)->first();
+        $new = $revisit_form->replicate();
+        $new->resource = $url_param;
+        $new->save();
+        // $revisit_form[0]['resource'] = $url_param;
+        // @dd($revisit_form);
 
         Survey::create($revisit_form[0]);
         return redirect('https://proxy.library.vcu.edu/login?url='.$url_param);
