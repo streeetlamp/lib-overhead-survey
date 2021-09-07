@@ -33,10 +33,7 @@ class SurveyController extends Controller
         $new = $revisit_form->replicate();
         $new->resource = $url_param;
         $new->save();
-        // $revisit_form[0]['resource'] = $url_param;
-        // @dd($revisit_form);
 
-        Survey::create($revisit_form[0]);
         return redirect('https://proxy.library.vcu.edu/login?url='.$url_param);
     }
 
