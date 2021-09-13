@@ -21,7 +21,9 @@ class SurveyController extends Controller
     {
         $sesh_Id = Session::get('_token');
         $revisit = DB::table('surveys')->where('sesh', $sesh_Id)->first();
-        $url_param = $request->query('url');
+        $url_param = $_SERVER['QUERY_STRING'];
+        $url_param = str_replace("url=", "", urldecode($url_param));
+
         Session::put('url', $url_param);
 
         // this is a new user
