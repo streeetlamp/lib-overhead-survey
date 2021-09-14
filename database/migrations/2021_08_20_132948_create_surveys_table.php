@@ -17,11 +17,19 @@ class CreateSurveysTable extends Migration
             $table->id();
             $table->timestamps();
             $table->text('status')->nullable();
+            $table->text('status-other')->nullable();
             $table->text('affiliation')->nullable();
             $table->text('location')->nullable();
             $table->text('purpose')->nullable();
-            $table->text('sesh')->nullable();
+            $table->text('sponsor')->nullable();
+            $table->text('principal')->nullable();
+            $table->text('grant')->nullable();
+            $table->text('non-funded')->nullable();
+            $table->text('patient-care')->nullable();
+            $table->text('other-sponsored')->nullable();
+            $table->text('other-activities')->nullable();
             $table->text('resource')->nullable();
+            $table->text('sesh')->nullable();
         });
     }
 

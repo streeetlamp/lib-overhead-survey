@@ -17,12 +17,12 @@
 
 </head>
 
-<body>
+<body class="mb-4">
     @section('sidebar')
 
     @show
 
-    <div class="container-fluid col-xs-12 col-sm-12 col-md-12" style="width:1240px;">
+    <div class="container-fluid col-xs-12 col-sm-12 col-md-12 mb-3" style="width:1240px;">
         @yield('content')
     </div>
 </body>
