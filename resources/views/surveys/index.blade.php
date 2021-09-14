@@ -50,7 +50,7 @@
                 </div>
             </div>
 
-            <div class="form-group col-xs-10 col-sm-10 col-md-10 mt-1 mb-3">
+            <div class="form-group col-xs-10 col-sm-10 col-md-10 mb-3">
                 <div>
                     <label for="status_other">Other-VCU (Please specify)</label>
                     <input type="text" id="status_other" name="status_other" maxlength="240" size="60">
