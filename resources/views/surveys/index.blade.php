@@ -24,7 +24,7 @@
         <div class="form-row">
             <div class="form-check col-xs-10 col-sm-10 col-md-10 mt-3">
                 <p><strong>1. Are you a:</strong></p>
-                <div><input type="radio" id="status" name="status" value="VCU Undergraduate Student">
+                <div><input required="" type="radio" id="status" name="status" value="VCU Undergraduate Student">
                     <label for="status">VCU Undergraduate Student</label>
                 </div>
                 <div><input type="radio" id="status" name="status" value="VCU Graduate/Professional Student">
@@ -57,9 +57,9 @@
                 </div>
             </div>
 
-            <div class="col-xs-10 col-sm-10 col-md-10 mt-3 mb-3">
+            <div class="form-group col-xs-10 col-sm-10 col-md-10 mt-3 mb-3">
                 <p><strong>2. Are you affiliated with:</strong></p>
-                <div><input type="radio" id="affiliation" name="affiliation" value="Humanities & Science">
+                <div><input required="" type="radio" id="affiliation" name="affiliation" value="Humanities & Science">
                     <label for="affiliation">Humanities & Science</label>
                 </div>
                 <div><input type="radio" id="affiliation" name="affiliation" value="Arts">
