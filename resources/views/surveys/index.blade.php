@@ -44,16 +44,20 @@
                         value="VCU Health Staff (e.g. Clinician, Nurse, Therapist)">
                     <label for="status">VCU Health Staff (e.g. Clinician, Nurse, Therapist)</label>
                 </div>
+                <hr>
+                <div><input type="radio" id="status" name="status" value="Other">
+                    <label for="status">Other</label>
+                </div>
             </div>
 
             <div class="form-check col-xs-10 col-sm-10 col-md-10 mt-1 mb-3">
                 <div>
-                    <label for="status-other">Other-VCU (Please specify)</label>
-                    <input type="text" id="status-other" name="status-other" maxlength="240" size="60">
+                    <label for="status_other">Other-VCU (Please specify)</label>
+                    <input type="text" id="status_other" name="status_other" maxlength="240" size="60">
                 </div>
                 <div>
-                    <label for="status-other">Non-VCU (Please specify)</label>
-                    <input type="text" id="status-other" name="status-other" maxlength="240" size="60">
+                    <label for="status_other">Non-VCU (Please specify)</label>
+                    <input type="text" id="status_other" name="status_other" maxlength="240" size="60">
                 </div>
             </div>
 
@@ -118,9 +122,10 @@
                     <option>VCUarts Qatar campus</option>
                 </select>
             </div>
-            {{-- <div class="form-group col-xs-10 col-sm-10 col-md-10 mt-3 mb-3">
+            <div class="form-group col-xs-10 col-sm-10 col-md-10 mt-3 mb-3">
                 <p><strong>4. Purpose for using online resource:</strong></p>
-                <div class="form-check"><input class="form-check-input" type="checkbox" id="purpose" name="purpose" value="Sponsored (Funded) Research">
+                <div class="form-check"><input class="form-check-input" type="checkbox" id="purpose" name="purpose"
+                        value="Sponsored (Funded) Research">
                     <label class="form-check-label" for="purpose">Sponsored (Funded) Research</label>
                     <ul>
                         <li>This includes:
@@ -135,21 +140,29 @@
                                         Virginia Commonwealth University.</em></li>
                             </ul>
                         </li>
-                        <div class="form-group col-xs-10 col-sm-10 col-md-10 mt-3 mb-3">
-                        <li class="mt-2">Sponsor or fund source name (e.g., NIH, NSF, DOD, NASA): <input type="text" id="sponsor"
-                                name="sponsor" maxlength="240" size="20"><label class="form-check-label" for="sponsor"></li>
-                        <li class="mt-2">Principal Investigator/Researcher: <input type="text" id="principal" name="principal"
-                             maxlength="240" size="20"></li>
-                        <li class="mt-2">Name of Grant: <input type="text" id="grant" name="grant" maxlength="240"
-                                size="20"></li>
-                                                        </div>
-
                     </ul>
                 </div>
-                                        <div class="form-group col-xs-10 col-sm-10 col-md-10 mt-3 mb-3">
+            </div>
 
-                <div class="form-check"><input type="checkbox" id="non-funded" name="non-funded" value="(Non-Funded) Research">
-                    <label class="form-check-label" for="non-funded">Instruction/Education/Departmental (Non-Funded) Research</label>
+            <div class="form-group col-xs-10 col-sm-10 col-md-10 mt-3 mb-3">
+                <ul>
+                    <li class="mt-2">Sponsor or fund source name (e.g., NIH, NSF, DOD, NASA): <input type="text"
+                            id="sponsor" name="sponsor" maxlength="240" size="20"><label class="form-check-label"
+                            for="sponsor"></li>
+                    <li class="mt-2">Principal Investigator/Researcher: <input type="text" id="principal"
+                            name="principal" maxlength="240" size="20"></li>
+                    <li class="mt-2">Name of Grant: <input type="text" id="grant" name="grant" maxlength="240"
+                            size="20"></li>
+                </ul>
+
+            </div>
+
+            <div class="form-group col-xs-10 col-sm-10 col-md-10 mt-3 mb-3">
+
+                <div class="form-check"><input type="checkbox" id="non_funded" name="non_funded" value="Instruction/Education/Departmental (non-funded)
+                            Research">
+                    <label class="form-check-label" for="non_funded">Instruction/Education/Departmental (non-funded)
+                        Research</label>
                     <ul>
                         <li>This includes:
                             <ul>
@@ -166,43 +179,33 @@
                         </li>
                     </ul>
                 </div>
-                                        </div>
-                <div><input type="radio" id="patient-care" name="patient-care" value="Patient Care">
-                    <label for="patient-care">Patient Care</label>
-                    <ul>
-                        <li>This includes:
-                            <ul>
-                                <li>Activities related to treating patients</li>
-                                <li>Activities related to hospital duties</li>
-                                <li>Activities related to residents, interns, etc.</li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-                <div><input type="radio" id="other-sponsored" name="other-sponsored" value="Other Sponsored Activities">
-                    <label for="other-sponsored">Other Sponsored Activities (Public Service)</label>
-                    <ul>
-                        <li>This includes:
-                            <ul>
-                                <li>Sponsored projects involving activities other than research or training, such as health
-                                    services and clinical trials</li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-                <div><input class="mb-3" type="radio" id="other-activities" name="other-activities" value="Other Activities">
-                    <label for="other-activities">Other Activities</label>
-                    <ul>
-                        <li>This includes:
-                            <ul>
-                                <li>Recreational usages (not for class)</li>
-                                <li>Administrative work, including initial grant preparation</li>
-                                <li>Other purposes not identified in other categories</li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div> --}}
+            </div>
+
+            <div class="form-group col-xs-10 col-sm-10 col-md-10 mt-3 mb-3"><input type="checkbox" id="other_sponsored"
+                    name="other_sponsored" value="Other Sponsored Activities (Public Service)">
+                <label for="other_sponsored">Other Sponsored Activities (Public Service)</label>
+                <ul>
+                    <li>This includes:
+                        <ul>
+                            <li>Sponsored projects involving activities other than research or training, such as health
+                                services and clinical trials</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="form-group col-xs-10 col-sm-10 col-md-10 mt-3 mb-3"><input class="mb-3" type="checkbox"
+                    id="other_activities" name="other_activities" value="Other Activities">
+                <label for="other_activities">Other Activities</label>
+                <ul>
+                    <li>This includes:
+                        <ul>
+                            <li>Recreational usages (not for class)</li>
+                            <li>Administrative work, including initial grant preparation</li>
+                            <li>Other purposes not identified in other categories</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
             <div class="col-xs-12 col-sm-12 col-md-12 mt-4">
                 <button type="submit" class="btn btn-lg btn-primary">Submit</button>
             </div>

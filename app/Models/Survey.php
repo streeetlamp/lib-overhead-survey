@@ -17,10 +17,18 @@ class Survey extends Model
 
     protected $fillable = [
         'status',
+        'status_other',
         'affiliation',
         'location',
         'purpose',
         'sesh',
-        'resource'
+        'resource',
+        'sponsor',
+        'principal',
+        'grant',
+        'non_funded',
+        'patient_care',
+        'other_sponsored',
+        'other_activities',
     ];
 }
