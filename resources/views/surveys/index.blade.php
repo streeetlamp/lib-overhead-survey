@@ -50,7 +50,7 @@
                 </div>
             </div>
 
-            <div class="form-check col-xs-10 col-sm-10 col-md-10 mt-1 mb-3">
+            <div class="form-group col-xs-10 col-sm-10 col-md-10 mt-1 mb-3">
                 <div>
                     <label for="status_other">Other-VCU (Please specify)</label>
                     <input type="text" id="status_other" name="status_other" maxlength="240" size="60">
@@ -112,7 +112,7 @@
                     <label for="affiliation">Undeclared</label>
                 </div>
             </div>
-            <div class="col-xs-10 col-sm-10 col-md-10 mt-3 mb-3">
+            <div class="form-group col-xs-10 col-sm-10 col-md-10 mt-3 mb-3">
                 <label for="location"><strong>3. Your location is:</strong></label>
                 <select name="location" class="form-control" id="location">
                     <option>In Cabell Library</option>
@@ -158,9 +158,7 @@
             </div>
 
             <div class="form-group col-xs-10 col-sm-10 col-md-10 mt-3 mb-3">
-
-                <div class="form-check"><input type="checkbox" id="non_funded" name="non_funded" value="Instruction/Education/Departmental (non-funded)
-                            Research">
+                <input type="checkbox" id="non_funded" name="non_funded" value="Instruction/Education/Departmental (non-funded) Research">
                     <label class="form-check-label" for="non_funded">Instruction/Education/Departmental (non-funded)
                         Research</label>
                     <ul>
@@ -178,7 +176,6 @@
                             </ul>
                         </li>
                     </ul>
-                </div>
             </div>
 
             <div class="form-group col-xs-10 col-sm-10 col-md-10 mt-3 mb-3"><input type="checkbox" id="other_sponsored"
