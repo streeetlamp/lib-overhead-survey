@@ -24,92 +24,91 @@
         <div class="form-row">
             <div class="form-check col-xs-10 col-sm-10 col-md-10 mt-3">
                 <p><strong>1. Are you a:</strong></p>
-                <div><input required="" type="radio" id="status" name="status" value="VCU Undergraduate Student">
-                    <label for="status">VCU Undergraduate Student</label>
+                <div><input required="" type="radio" id="status1" name="status" value="VCU Undergraduate Student">
+                    <label for="status1">VCU Undergraduate Student</label>
                 </div>
-                <div><input type="radio" id="status" name="status" value="VCU Graduate/Professional Student">
-                    <label for="status">VCU Graduate/Professional Student</label>
+                <div><input type="radio" id="status2" name="status" value="VCU Graduate/Professional Student">
+                    <label for="status2">VCU Graduate/Professional Student</label>
                 </div>
-                <div><input type="radio" id="status" name="status" value="VCU Faculty">
-                    <label for="status">VCU Faculty</label>
+                <div><input type="radio" id="status3" name="status" value="VCU Faculty">
+                    <label for="status3">VCU Faculty</label>
                 </div>
-                <div><input type="radio" id="status" name="status"
+                <div><input type="radio" id="status4" name="status"
                         value="VCU Post-Doc Fellow, Research Associate, or Lecturer">
-                    <label for="status">VCU Post-Doc Fellow, Research Associate, or Lecturer</label>
+                    <label for="status4">VCU Post-Doc Fellow, Research Associate, or Lecturer</label>
                 </div>
-                <div><input type="radio" id="status" name="status" value="VCU Staff">
-                    <label for="status">VCU Staff</label>
+                <div><input type="radio" id="status5" name="status" value="VCU Staff">
+                    <label for="status5">VCU Staff</label>
                 </div>
-                <div><input type="radio" id="status" name="status"
+                <div><input type="radio" id="status6" name="status"
                         value="VCU Health Staff (e.g. Clinician, Nurse, Therapist)">
-                    <label for="status">VCU Health Staff (e.g. Clinician, Nurse, Therapist)</label>
+                    <label for="status6">VCU Health Staff (e.g. Clinician, Nurse, Therapist)</label>
                 </div>
-                <hr>
-                <div><input type="radio" id="status" name="status" value="Other">
-                    <label for="status">Other</label>
+                <div><input type="radio" id="status7" name="status" value="Other">
+                    <label for="status7">Other</label>
                 </div>
             </div>
 
             <div class="form-group col-xs-10 col-sm-10 col-md-10 mb-3">
                 <div>
-                    <label for="status_other">Other-VCU (Please specify)</label>
-                    <input type="text" id="status_other" name="status_other" maxlength="240" size="60">
+                    <label for="status_other1">Other-VCU (Please specify)</label>
+                    <input type="text" id="status_other1" name="status_other" maxlength="240" size="60">
                 </div>
                 <div>
-                    <label for="status_other">Non-VCU (Please specify)</label>
-                    <input type="text" id="status_other" name="status_other" maxlength="240" size="60">
+                    <label for="status_other2">Non-VCU (Please specify)</label>
+                    <input type="text" id="status_other2" name="status_other" maxlength="240" size="60">
                 </div>
             </div>
 
             <div class="form-group col-xs-10 col-sm-10 col-md-10 mt-3 mb-3">
                 <p><strong>2. Are you affiliated with:</strong></p>
-                <div><input required="" type="radio" id="affiliation" name="affiliation" value="Humanities & Science">
-                    <label for="affiliation">Humanities & Science</label>
+                <div><input required="" type="radio" id="affiliation1" name="affiliation" value="Humanities & Science">
+                    <label for="affiliation1">Humanities & Science</label>
                 </div>
-                <div><input type="radio" id="affiliation" name="affiliation" value="Arts">
-                    <label for="affiliation">Arts</label>
+                <div><input type="radio" id="affiliation2" name="affiliation" value="Arts">
+                    <label for="affiliation2">Arts</label>
                 </div>
-                <div><input type="radio" id="affiliation" name="affiliation" value="Business">
-                    <label for="affiliation">Business</label>
+                <div><input type="radio" id="affiliation3" name="affiliation" value="Business">
+                    <label for="affiliation3">Business</label>
                 </div>
-                <div><input type="radio" id="affiliation" name="affiliation" value="Engineering">
-                    <label for="affiliation">Engineering</label>
+                <div><input type="radio" id="affiliation4" name="affiliation" value="Engineering">
+                    <label for="affiliation4">Engineering</label>
                 </div>
-                <div><input type="radio" id="affiliation" name="affiliation" value="Government & Public Affairs">
-                    <label for="affiliation">Government & Public Affairs</label>
+                <div><input type="radio" id="affiliation5" name="affiliation" value="Government & Public Affairs">
+                    <label for="affiliation5">Government & Public Affairs</label>
                 </div>
-                <div><input type="radio" id="affiliation" name="affiliation" value="Mass Communications">
-                    <label for="affiliation">Mass Communications</label>
+                <div><input type="radio" id="affiliation6" name="affiliation" value="Mass Communications">
+                    <label for="affiliation6">Mass Communications</label>
                 </div>
-                <div><input type="radio" id="affiliation" name="affiliation" value="Life Sciences">
-                    <label for="affiliation">Life Sciences</label>
+                <div><input type="radio" id="affiliation7" name="affiliation" value="Life Sciences">
+                    <label for="affiliation7">Life Sciences</label>
                 </div>
-                <div><input type="radio" id="affiliation" name="affiliation" value="Social Work">
-                    <label for="affiliation">Social Work</label>
+                <div><input type="radio" id="affiliation8" name="affiliation" value="Social Work">
+                    <label for="affiliation8">Social Work</label>
                 </div>
-                <div><input type="radio" id="affiliation" name="affiliation" value="World Studies">
-                    <label for="affiliation">World Studies</label>
+                <div><input type="radio" id="affiliation9" name="affiliation" value="World Studies">
+                    <label for="affiliation9">World Studies</label>
                 </div>
-                <div><input type="radio" id="affiliation" name="affiliation" value="Medicine">
-                    <label for="affiliation">Medicine</label>
+                <div><input type="radio" id="affiliation10" name="affiliation" value="Medicine">
+                    <label for="affiliation10">Medicine</label>
                 </div>
-                <div><input type="radio" id="affiliation" name="affiliation" value="Allied Health Professions">
-                    <label for="affiliation">Allied Health Professions</label>
+                <div><input type="radio" id="affiliation11" name="affiliation" value="Allied Health Professions">
+                    <label for="affiliation11">Allied Health Professions</label>
                 </div>
-                <div><input type="radio" id="affiliation" name="affiliation" value="Nursing">
-                    <label for="affiliation">Nursing</label>
+                <div><input type="radio" id="affiliation12" name="affiliation" value="Nursing">
+                    <label for="affiliation12">Nursing</label>
                 </div>
-                <div><input type="radio" id="affiliation" name="affiliation" value="Pharmacy">
-                    <label for="affiliation">Pharmacy</label>
+                <div><input type="radio" id="affiliation13" name="affiliation" value="Pharmacy">
+                    <label for="affiliation13">Pharmacy</label>
                 </div>
-                <div><input type="radio" id="affiliation" name="affiliation" value="Dentistry">
-                    <label for="affiliation">Dentistry</label>
+                <div><input type="radio" id="affiliation14" name="affiliation" value="Dentistry">
+                    <label for="affiliation14">Dentistry</label>
                 </div>
-                <div><input type="radio" id="affiliation" name="affiliation" value="VCU Health System">
-                    <label for="affiliation">VCU Health System</label>
+                <div><input type="radio" id="affiliation15" name="affiliation" value="VCU Health System">
+                    <label for="affiliation15">VCU Health System</label>
                 </div>
-                <div><input type="radio" id="affiliation" name="affiliation" value="Undeclared">
-                    <label for="affiliation">Undeclared</label>
+                <div><input type="radio" id="affiliation16" name="affiliation" value="Undeclared">
+                    <label for="affiliation16">Undeclared</label>
                 </div>
             </div>
             <div class="form-group col-xs-10 col-sm-10 col-md-10 mt-3 mb-3">
