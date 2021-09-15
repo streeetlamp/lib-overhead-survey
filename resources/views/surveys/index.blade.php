@@ -123,9 +123,9 @@
             </div>
             <div class="form-group col-xs-10 col-sm-10 col-md-10 mt-3 mb-3">
                 <p><strong>4. Purpose for using online resource:</strong></p>
-                <div class="form-check"><input class="form-check-input" type="checkbox" id="purpose" name="purpose"
+                <div class="form-check"><input class="form-check-input" type="checkbox" id="purpose1" name="purpose"
                         value="Sponsored (Funded) Research">
-                    <label class="form-check-label" for="purpose">Sponsored (Funded) Research</label>
+                    <label class="form-check-label" for="purpose1">Sponsored (Funded) Research</label>
                     <ul>
                         <li>This includes:
                             <ul>
@@ -145,12 +145,14 @@
 
             <div class="form-group col-xs-10 col-sm-10 col-md-10 mt-3 mb-3">
                 <ul>
-                    <li class="mt-2">Sponsor or fund source name (e.g., NIH, NSF, DOD, NASA): <input type="text"
-                            id="sponsor" name="sponsor" maxlength="240" size="20"><label class="form-check-label"
-                            for="sponsor"></li>
-                    <li class="mt-2">Principal Investigator/Researcher: <input type="text" id="principal"
+                    <li class="mt-2"><label class="form-check-label pr-2"
+                            for="sponsor1">Sponsor or fund source name (e.g., NIH, NSF, DOD, NASA): </label><input type="text"
+                            id="sponsor1" name="sponsor" maxlength="240" size="20"></li>
+                    <li class="mt-2"><label class="form-check-label pr-2"
+                            for="principal1">Principal Investigator/Researcher: </label><input type="text" id="principal1"
                             name="principal" maxlength="240" size="20"></li>
-                    <li class="mt-2">Name of Grant: <input type="text" id="grant" name="grant" maxlength="240"
+                    <li class="mt-2"><label class="form-check-label pr-2"
+                            for="grant1">Name of Grant: </label><input type="text" id="grant1" name="grant" maxlength="240"
                             size="20"></li>
                 </ul>
 
