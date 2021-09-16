@@ -18,6 +18,23 @@
             </ul>
         </div>
     @endif
+    <div class="row">
+        <div class="col-lg-12 mt-3">
+            <p>This survey is being conducted during randomly selected two hour periods from September 2021 to August 2022
+                by Virginia Commonwealth University to assess the usage of VCU Libraries' electronic services. The data
+                collected will be used to meet federal reporting requirements and to help establish funding allocations for
+                the Libraries.</p>
+            <ul>
+                <li>All responses are confidential.</li>
+                <li>After completing the survey, you will be connected to the service you selected.</li>
+                <li>This survey uses cookies to ensure that you only need to complete this survey form once during a
+                    session.</li>
+            </ul>
+            <p>
+                Thank you for your participation!
+            </p>
+        </div>
+    </div>
     <form action="{{ route('surveys.store') }}" method="POST">
         @csrf
         <hr>
@@ -145,38 +162,38 @@
 
             <div class="form-group col-xs-10 col-sm-10 col-md-10 mt-3 mb-3">
                 <ul>
-                    <li class="mt-2"><label class="form-check-label pr-2"
-                            for="sponsor1">Sponsor or fund source name (e.g., NIH, NSF, DOD, NASA): </label><input type="text"
-                            id="sponsor1" name="sponsor" maxlength="240" size="20"></li>
-                    <li class="mt-2"><label class="form-check-label pr-2"
-                            for="principal1">Principal Investigator/Researcher: </label><input type="text" id="principal1"
-                            name="principal" maxlength="240" size="20"></li>
-                    <li class="mt-2"><label class="form-check-label pr-2"
-                            for="grant1">Name of Grant: </label><input type="text" id="grant1" name="grant" maxlength="240"
-                            size="20"></li>
+                    <li class="mt-2"><label class="form-check-label pr-2" for="sponsor1">Sponsor or fund source
+                            name (e.g., NIH, NSF, DOD, NASA): </label><input type="text" id="sponsor1" name="sponsor"
+                            maxlength="240" size="20"></li>
+                    <li class="mt-2"><label class="form-check-label pr-2" for="principal1">Principal
+                            Investigator/Researcher: </label><input type="text" id="principal1" name="principal"
+                            maxlength="240" size="20"></li>
+                    <li class="mt-2"><label class="form-check-label pr-2" for="grant1">Name of Grant:
+                        </label><input type="text" id="grant1" name="grant" maxlength="240" size="20"></li>
                 </ul>
 
             </div>
 
             <div class="form-group col-xs-10 col-sm-10 col-md-10 mt-3 mb-3">
-                <input type="checkbox" id="non_funded" name="non_funded" value="Instruction/Education/Departmental (non-funded) Research">
-                    <label class="form-check-label" for="non_funded">Instruction/Education/Departmental (non-funded)
-                        Research</label>
-                    <ul>
-                        <li>This includes:
-                            <ul>
-                                <li>Student coursework, including term papers</li>
-                                <li>Preparation for classes</li>
-                                <li>Teaching activities</li>
-                                <li>Theses, dissertations, etc.</li>
-                                <li>Sponsored training (excluding sponsored training on research techniques, which is
-                                    included in the Sponsored Research Projects definition)</li>
-                                <li>Independent faculty research, writing, scholarly activities (includes all research
-                                    activities not separately budgeted and accounted for as sponsored research projects)
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
+                <input type="checkbox" id="non_funded" name="non_funded"
+                    value="Instruction/Education/Departmental (non-funded) Research">
+                <label class="form-check-label" for="non_funded">Instruction/Education/Departmental (non-funded)
+                    Research</label>
+                <ul>
+                    <li>This includes:
+                        <ul>
+                            <li>Student coursework, including term papers</li>
+                            <li>Preparation for classes</li>
+                            <li>Teaching activities</li>
+                            <li>Theses, dissertations, etc.</li>
+                            <li>Sponsored training (excluding sponsored training on research techniques, which is
+                                included in the Sponsored Research Projects definition)</li>
+                            <li>Independent faculty research, writing, scholarly activities (includes all research
+                                activities not separately budgeted and accounted for as sponsored research projects)
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
 
             <div class="form-group col-xs-10 col-sm-10 col-md-10 mt-3 mb-3"><input type="checkbox" id="other_sponsored"
