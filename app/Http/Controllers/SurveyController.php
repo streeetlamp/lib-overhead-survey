@@ -20,7 +20,7 @@ class SurveyController extends Controller
     public function index(Request $request, Survey $Survey)
     {
         $sesh_Id = Session::get('_token');
-        $revisit = DB::table('surveys')->where('sesh', $sesh_Id)->first();
+        $revisit = DB::table('surveys')->where('session', $sesh_Id)->first();
         $url_param = $_SERVER['QUERY_STRING'];
         $url_param = str_replace("url=", "", $url_param);
 
@@ -31,7 +31,7 @@ class SurveyController extends Controller
             return view('surveys.index');
         }
 
-        $revisit_form = Survey::where('sesh',$sesh_Id)->first();
+        $revisit_form = Survey::where('session',$sesh_Id)->first();
         $new = $revisit_form->replicate();
         $new->resource = $url_param;
         $new->save();
@@ -50,7 +50,7 @@ class SurveyController extends Controller
         $sesh_toke = Session::get('_token');
         $sesh_url = Session::get('url');
         $form_req = $request->all();
-        $form_req['sesh'] = $sesh_toke;
+        $form_req['session'] = $sesh_toke;
         $form_req['resource'] = str_replace("https://proxy.library.vcu.edu/login?url=", "", $sesh_url);
 
         Survey::create($form_req);

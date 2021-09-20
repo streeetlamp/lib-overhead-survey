@@ -21,14 +21,10 @@ class Survey extends Model
         'affiliation',
         'location',
         'purpose',
-        'sesh',
+        'session',
         'resource',
         'sponsor',
         'principal',
         'grant',
-        'non_funded',
-        'patient_care',
-        'other_sponsored',
-        'other_activities',
     ];
 }
