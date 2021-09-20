@@ -10,17 +10,14 @@
             <p>
             <h5>{{ $message }}</h5>
             @if ($resource = Session::get('url'))
-                <a class="btn btn-primary" href="https://proxy.library.vcu.edu/login?url={{ $resource}}" role="button">Proceed to resource</a>
+                <a class="btn btn-primary" href="{{ $resource }}" role="button">Proceed to resource</a>
+                <script>
+                    let resourceRedirect = setTimeout(function resRed() {
+                        window.location.href = "{!! $resource !!}";
+                    }, 3000);
+                </script>
             @endif
             </p>
         </div>
-    @endif
-    @if ($resource = Session::get('url'))
-        <script>
-            let seshRed = "https://proxy.library.vcu.edu/login?url={{ $resource }}";
-            let resourceRedirect = setTimeout(function resRed() {
-                window.location.replace(seshRed);
-            }, 3000);
-        </script>
     @endif
 @endsection

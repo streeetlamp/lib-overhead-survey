@@ -22,9 +22,9 @@ class SurveyController extends Controller
         $sesh_Id = Session::get('_token');
         $revisit = DB::table('surveys')->where('sesh', $sesh_Id)->first();
         $url_param = $_SERVER['QUERY_STRING'];
-        $url_param = str_replace("url=", "", urldecode($url_param));
+        $url_param = str_replace("url=", "", $url_param);
 
-        Session::put('url', $url_param);
+        Session::put('url', 'https://proxy.library.vcu.edu/login?url='.$url_param);
 
         // this is a new user
         if ($revisit === null) {
@@ -51,11 +51,11 @@ class SurveyController extends Controller
         $sesh_url = Session::get('url');
         $form_req = $request->all();
         $form_req['sesh'] = $sesh_toke;
-        $form_req['resource'] = $sesh_url;
+        $form_req['resource'] = str_replace("https://proxy.library.vcu.edu/login?url=", "", $sesh_url);
 
         Survey::create($form_req);
         Session::put('success', 'Survey created successfully!');
         return view('surveys.success')->with('success', 'Survey created successfully.')
-        ->with('url', $request->input('url'));
+        ->with('url', $sesh_url);
     }
 }

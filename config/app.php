@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Usage Survey'),
+    'name' => env('APP_NAME', 'VCU Libraries Usage Survey'),
 
     /*
     |--------------------------------------------------------------------------
@@ -67,7 +67,7 @@ return [
     |
     */
 
-    'timezone' => 'EST',
+    'timezone' => 'America/New_York',
 
     /*
     |--------------------------------------------------------------------------

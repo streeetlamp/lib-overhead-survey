@@ -18,6 +18,23 @@
             </ul>
         </div>
     @endif
+    <div class="row">
+        <div class="col-lg-12 mt-3">
+            <p>This survey is being conducted during randomly selected two hour periods from September 2021 to August 2022
+                by Virginia Commonwealth University to assess the usage of VCU Libraries' electronic services. The data
+                collected will be used to meet federal reporting requirements and to help establish funding allocations for
+                the Libraries.</p>
+            <ul>
+                <li>All responses are confidential.</li>
+                <li>After completing the survey, you will be connected to the service you selected.</li>
+                <li>This survey uses cookies to ensure that you only need to complete this survey form once during a
+                    session.</li>
+            </ul>
+            <p>
+                Thank you for your participation!
+            </p>
+        </div>
+    </div>
     <form action="{{ route('surveys.store') }}" method="POST">
         @csrf
         <hr>
