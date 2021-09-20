@@ -12,9 +12,9 @@
             @if ($resource = Session::get('url'))
                 <a class="btn btn-primary" href="{{ $resource }}" role="button">Proceed to resource</a>
                 <script>
-                    let resourceRedirect = setTimeout(function resRed() {
-                        window.location.href = "{!! $resource !!}";
-                    }, 3000);
+                    // let resourceRedirect = setTimeout(function resRed() {
+                    //     window.location.href = "{!! $resource !!}";
+                    // }, 3000);
                 </script>
             @endif
             </p>

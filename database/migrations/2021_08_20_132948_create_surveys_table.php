@@ -18,8 +18,8 @@ class CreateSurveysTable extends Migration
             $table->timestamps();
             $table->text('status')->nullable();
             $table->text('status_other')->nullable();
-            $table->text('affiliation_other')->nullable();
             $table->text('affiliation')->nullable();
+            $table->text('affiliation_other')->nullable();
             $table->text('location')->nullable();
             $table->text('purpose')->nullable();
             $table->text('sponsor')->nullable();
