@@ -68,7 +68,7 @@
                     <label for="status8">Non-VCU (Please specify)</label>
                 </div>
                 <div class="form-group col-xs-10 col-sm-10 col-md-10 mb-2 mt-1">
-                    <input type="text" id="status_other" style="visibility:hidden" placeholder="Please specify" name="status_other" maxlength="240" size="60">
+                    <input type="text" id="status_other" style="visibility:hidden;" placeholder="Please specify" name="status_other" maxlength="240" size="60">
                 </div>
             </div>
 
@@ -138,7 +138,7 @@
                     <label for="affiliation18">Non-VCU (Please specify)</label>
                 </div>
                 <div class="form-group col-xs-10 col-sm-10 col-md-10 mb-2 mt-1">
-                    <input type="text" id="affiliation_other" style="visibility:hidden" placeholder="Please specify" name="affiliation_other" maxlength="240" size="60">
+                    <input type="text" id="affiliation_other" style="visibility:hidden;" placeholder="Please specify" name="affiliation_other" maxlength="240" size="60">
                 </div>
             </div>
             <script>
@@ -162,7 +162,7 @@
             <div class="form-group col-xs-10 col-sm-10 col-md-10 mt-3 mb-3">
                 <p><strong>4. Purpose for using online resource:</strong></p>
                 <div class="form-check"><input class="form-check-input" type="radio" id="purpose1" name="purpose"
-                        value="Sponsored (Funded) Research">
+                        value="Sponsored (Funded) Research" onclick="javascript:sponsoredCheck();">
                     <label class="form-check-label" for="purpose1">Sponsored (Funded) Research</label>
                     <ul>
                         <li>This includes:
@@ -181,7 +181,7 @@
                     </ul>
                 </div>
 
-                <div class="col-xs-10 col-sm-10 col-md-10 mt-3 mb-3">
+                <div class="col-xs-10 col-sm-10 col-md-10 mt-3 mb-3" id="grant-group" style="visibility:hidden;">
                     <ul>
                         <li class="mt-2"><label class="form-check-label pr-2" for="sponsor1">Sponsor or fund
                                 source name (e.g., NIH, NSF, DOD, NASA): </label><input type="text" id="sponsor1"
@@ -195,7 +195,7 @@
                 </div>
                 <div class="col-xs-10 col-sm-10 col-md-10 mt-3 mb-3">
                     <input type="radio" id="purpose2" name="purpose"
-                        value="Instruction/Education/Departmental (non-funded) Research">
+                        value="Instruction/Education/Departmental (non-funded) Research" onclick="javascript:sponsoredCheck();">
                     <label class="form-check-label" for="purpose2">Instruction/Education/Departmental (non-funded)
                         Research</label>
                     <ul>
@@ -216,7 +216,7 @@
                 </div>
 
                 <div class="col-xs-10 col-sm-10 col-md-10 mt-3 mb-3"><input type="radio" id="purpose3" name="purpose"
-                        value="Other Sponsored Activities (Public Service)">
+                        value="Other Sponsored Activities (Public Service)" onclick="javascript:sponsoredCheck();">
                     <label class="form-check-label" for="purpose3">Other Sponsored Activities (Public Service)</label>
                     <ul>
                         <li>This includes:
@@ -229,7 +229,7 @@
                     </ul>
                 </div>
                 <div class="col-xs-10 col-sm-10 col-md-10 mt-3 mb-3"><input class="mb-3" type="radio"
-                        id="purpose4" name="purpose" value="Other Activities">
+                        id="purpose4" name="purpose" value="Other Activities" onclick="javascript:sponsoredCheck();">
                     <label class="form-check-label" for="purpose4">Other Activities</label>
                     <ul>
                         <li>This includes:
@@ -242,6 +242,14 @@
                     </ul>
                 </div>
             </div>
+                <script>
+                function sponsoredCheck() {
+                    if (document.getElementById('purpose1').checked) {
+                        document.getElementById('grant-group').style.visibility = 'visible';
+                    }
+                    else document.getElementById('grant-group').style.visibility = 'hidden';
+                }
+                </script>
 
             <div class="col-xs-12 col-sm-12 col-md-12 mt-4">
                 <button type="submit" class="btn btn-lg btn-primary">Submit</button>
