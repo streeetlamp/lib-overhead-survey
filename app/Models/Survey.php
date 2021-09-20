@@ -26,5 +26,6 @@ class Survey extends Model
         'sponsor',
         'principal',
         'grant',
+        'affiliation_other',
     ];
 }

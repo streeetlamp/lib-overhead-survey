@@ -127,6 +127,19 @@
                 <div><input type="radio" id="affiliation16" name="affiliation" value="Undeclared">
                     <label for="affiliation16">Undeclared</label>
                 </div>
+                <div><input type="radio" id="affiliation17" name="affiliation" value="Other">
+                    <label for="affiliation17">Other</label>
+                </div>
+            </div>
+            <div class="form-group col-xs-10 col-sm-10 col-md-10 mb-3">
+                <div>
+                    <label for="affiliation_other1">Other-VCU (Please specify)</label>
+                    <input type="text" id="affiliation_other1" name="affiliation_other" maxlength="240" size="60">
+                </div>
+                <div>
+                    <label for="affiliation_other2">Non-VCU (Please specify)</label>
+                    <input type="text" id="affiliation_other2" name="affiliation_other" maxlength="240" size="60">
+                </div>
             </div>
             <div class="form-group col-xs-10 col-sm-10 col-md-10 mt-3 mb-3">
                 <label for="location"><strong>3. Your location is:</strong></label>
@@ -152,7 +165,8 @@
                                 </li>
                                 <li>Research training grants and fellowships and research career development awards</li>
                                 <li>Note: <em>This category includes only funded research projects and research training
-                                        activities specifically budgeted and accounted for as organized research projects by
+                                        activities specifically budgeted and accounted for as organized research
+                                        projects by
                                         Virginia Commonwealth University.</em></li>
                             </ul>
                         </li>
@@ -199,7 +213,8 @@
                     <ul>
                         <li>This includes:
                             <ul>
-                                <li>Sponsored projects involving activities other than research or training, such as health
+                                <li>Sponsored projects involving activities other than research or training, such as
+                                    health
                                     services and clinical trials</li>
                             </ul>
                         </li>
