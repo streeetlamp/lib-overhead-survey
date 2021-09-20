@@ -172,9 +172,9 @@
                     </ul>
                 </div>
                 <div class="col-xs-10 col-sm-10 col-md-10 mt-3 mb-3">
-                    <input type="radio" id="non_funded" name="purpose"
+                    <input type="radio" id="purpose2" name="purpose"
                         value="Instruction/Education/Departmental (non-funded) Research">
-                    <label class="form-check-label" for="purpose">Instruction/Education/Departmental (non-funded)
+                    <label class="form-check-label" for="purpose2">Instruction/Education/Departmental (non-funded)
                         Research</label>
                     <ul>
                         <li>This includes:
@@ -193,9 +193,9 @@
                     </ul>
                 </div>
 
-                <div class="col-xs-10 col-sm-10 col-md-10 mt-3 mb-3"><input type="radio" id="other_sponsored" name="purpose"
+                <div class="col-xs-10 col-sm-10 col-md-10 mt-3 mb-3"><input type="radio" id="purpose3" name="purpose"
                         value="Other Sponsored Activities (Public Service)">
-                    <label for="purpose">Other Sponsored Activities (Public Service)</label>
+                    <label class="form-check-label" for="purpose3">Other Sponsored Activities (Public Service)</label>
                     <ul>
                         <li>This includes:
                             <ul>
@@ -206,8 +206,8 @@
                     </ul>
                 </div>
                 <div class="col-xs-10 col-sm-10 col-md-10 mt-3 mb-3"><input class="mb-3" type="radio"
-                        id="other_activities" name="purpose" value="Other Activities">
-                    <label for="purpose">Other Activities</label>
+                        id="purpose4" name="purpose" value="Other Activities">
+                    <label class="form-check-label" for="purpose4">Other Activities</label>
                     <ul>
                         <li>This includes:
                             <ul>

@@ -24,10 +24,6 @@ class CreateSurveysTable extends Migration
             $table->text('sponsor')->nullable();
             $table->text('principal')->nullable();
             $table->text('grant')->nullable();
-            $table->text('non_funded')->nullable();
-            $table->text('patient_care')->nullable();
-            $table->text('other_sponsored')->nullable();
-            $table->text('other_activities')->nullable();
             $table->text('resource')->nullable();
             $table->text('sesh')->nullable();
         });
