@@ -182,6 +182,7 @@
                 </div>
 
                 <div class="col-xs-10 col-sm-10 col-md-10 mt-3 mb-3" id="grant-group" style="visibility:hidden;">
+                    <p>Please complete one or all of the following:</p>
                     <ul>
                         <li class="mt-2"><label class="form-check-label pr-2" for="sponsor1">Sponsor or fund
                                 source name (e.g., NIH, NSF, DOD, NASA): </label><input type="text" id="sponsor1"
@@ -246,8 +247,10 @@
                 function sponsoredCheck() {
                     if (document.getElementById('purpose1').checked) {
                         document.getElementById('grant-group').style.visibility = 'visible';
+                        // document.getElementById('sponsor1').setAttribute("required", "");
                     }
                     else document.getElementById('grant-group').style.visibility = 'hidden';
+                                            // document.getElementById('sponsor1').removeAttr('required');
                 }
                 </script>
 
