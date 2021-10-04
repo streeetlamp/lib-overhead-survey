@@ -116,8 +116,8 @@
                 <div><input type="radio" id="affiliation10" name="affiliation" value="Medicine" onclick="javascript:affiliationOther();">
                     <label for="affiliation10">Medicine</label>
                 </div>
-                <div><input type="radio" id="affiliation11" name="affiliation" value="Allied Health Professions" onclick="javascript:affiliationOther();">
-                    <label for="affiliation11">Allied Health Professions</label>
+                <div><input type="radio" id="affiliation11" name="affiliation" value="Health Professions" onclick="javascript:affiliationOther();">
+                    <label for="affiliation11">Health Professions</label>
                 </div>
                 <div><input type="radio" id="affiliation12" name="affiliation" value="Nursing" onclick="javascript:affiliationOther();">
                     <label for="affiliation12">Nursing</label>
