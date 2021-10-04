@@ -95,6 +95,9 @@
                 <div><input type="radio" id="affiliation4" name="affiliation" value="Engineering" onclick="javascript:affiliationOther();">
                     <label for="affiliation4">Engineering</label>
                 </div>
+                <div><input type="radio" id="affiliation19" name="affiliation" value="Education" onclick="javascript:affiliationOther();">
+                    <label for="affiliation19">Education</label>
+                </div>
                 <div><input type="radio" id="affiliation5" name="affiliation" value="Government & Public Affairs" onclick="javascript:affiliationOther();">
                     <label for="affiliation5">Government & Public Affairs</label>
                 </div>
@@ -185,13 +188,13 @@
                     <p>Please complete one or all of the following:</p>
                     <ul>
                         <li class="mt-2"><label class="form-check-label pr-2" for="sponsor1">Sponsor or fund
-                                source name (e.g., NIH, NSF, DOD, NASA): </label><input type="text" id="sponsor1"
+                                source name (e.g., NIH, NSF, DOD, NASA): </label><input class="require-check-js" type="text" id="sponsor1"
                                 name="sponsor" maxlength="240" size="20"></li>
                         <li class="mt-2"><label class="form-check-label pr-2" for="principal1">Principal
-                                Investigator/Researcher: </label><input type="text" id="principal1" name="principal"
+                                Investigator/Researcher: </label><input type="text" class="require-check-js" id="principal1" name="principal"
                                 maxlength="240" size="20"></li>
                         <li class="mt-2"><label class="form-check-label pr-2" for="grant1">Name of Grant:
-                            </label><input type="text" id="grant1" name="grant" maxlength="240" size="20"></li>
+                            </label><input class="require-check-js" type="text" id="grant1" name="grant" maxlength="240" size="20"></li>
                     </ul>
                 </div>
                 <div class="col-xs-10 col-sm-10 col-md-10 mt-3 mb-3">
@@ -244,6 +247,26 @@
                 </div>
             </div>
                 <script>
+                           function deRequireCb(elClass) {
+            el=document.getElementsByClassName(elClass);
+
+            var atLeastOneChecked=false;//at least one cb is checked
+            for (i=0; i<el.length; i++) {
+                if (el[i].checked === true) {
+                    atLeastOneChecked=true;
+                }
+            }
+
+            if (atLeastOneChecked === true) {
+                for (i=0; i<el.length; i++) {
+                    el[i].required = false;
+                }
+            } else {
+                for (i=0; i<el.length; i++) {
+                    el[i].required = true;
+                }
+            }
+        }
                 function sponsoredCheck() {
                     if (document.getElementById('purpose1').checked) {
                         document.getElementById('grant-group').style.visibility = 'visible';
