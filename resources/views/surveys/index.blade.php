@@ -101,8 +101,8 @@
                 <div><input type="radio" id="affiliation5" name="affiliation" value="Government & Public Affairs" onclick="javascript:affiliationOther();">
                     <label for="affiliation5">Government & Public Affairs</label>
                 </div>
-                <div><input type="radio" id="affiliation6" name="affiliation" value="Mass Communications" onclick="javascript:affiliationOther();">
-                    <label for="affiliation6">Mass Communications</label>
+                <div><input type="radio" id="affiliation6" name="affiliation" value="Media & Culture" onclick="javascript:affiliationOther();">
+                    <label for="affiliation6">Media & Culture</label>
                 </div>
                 <div><input type="radio" id="affiliation7" name="affiliation" value="Life Sciences" onclick="javascript:affiliationOther();">
                     <label for="affiliation7">Life Sciences</label>
