@@ -154,7 +154,8 @@
             </script>
             <div class="form-group col-xs-10 col-sm-10 col-md-10 mt-3 mb-3">
                 <label for="location"><strong>3. Your location is:</strong></label>
-                <select name="location" class="form-control" id="location">
+                <select required="" name="location" class="form-control" id="location">
+                    <option value="">--Please choose an option--</option>
                     <option>In Cabell Library</option>
                     <option>In Health Sciences Library</option>
                     <option>Off-campus</option>
