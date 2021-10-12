@@ -8,7 +8,7 @@ return [
     'release' => trim(exec('git --git-dir ' . base_path('.git') . ' log --pretty="%h" -n1 HEAD')),
 
     // When left empty or `null` the Laravel environment will be used
-    'environment' => env(),
+    'environment' => env(''),
 
     'breadcrumbs' => [
         // Capture Laravel logs in breadcrumbs
