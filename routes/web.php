@@ -15,6 +15,11 @@ use Illuminate\Http\Request;
 |
 */
 
+Route::get('/debug-sentry', function () {
+    throw new Exception('My first Sentry error!');
+});
+
+
 // Route::get('/', function (Request $request) {
 //     $uri = $request->path();
 //     if ($request->has('url')) {
